@@ -22,5 +22,3 @@ export const getFacts = async (): Promise<string[]> => {
 
   return facts;
 };
-
-getFacts();
