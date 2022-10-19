@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as Cheerio from 'Cheerio';
+import * as Cheerio from 'cheerio';
 
 export const URL =
   'https://www.mygavet.com/services/blog/50-cat-facts-you-probably-didnt-know';
@@ -15,7 +15,7 @@ export const getFacts = async (): Promise<string[]> => {
   $('li:nth-child(26)').remove();
 
   $('li', 'div[class="field-item even"]').each(
-    (i: number, element: Cheerio.Element) => {
+    (i: number, element: cheerio.Element) => {
       facts.push($(element).text());
     }
   );
