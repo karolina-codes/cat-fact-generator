@@ -12,6 +12,7 @@ export const getFacts = async (): Promise<string[]> => {
   const $ = Cheerio.load(markup);
 
   $('li:nth-child(49)').remove();
+  $('li:nth-child(33)').remove();
   $('li:nth-child(26)').remove();
 
   $('li', 'div[class="field-item even"]').each(
