@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import './App.css';
 import { getImage } from './services/imageApi';
-import { getFacts } from './services/factScraper';
 
 function App() {
   const [image, setImage] = useState('');
@@ -17,10 +16,13 @@ function App() {
     handleNewImage();
   }, []);
 
-  const fetchFacts = async () => {
-    const newFacts = await getFacts();
-    setFacts(newFacts);
-    setFact(facts[0]);
+  const fetchFacts = () => {
+    fetch('/facts')
+      .then((response) => response.json())
+      .then((newFacts) => {
+        setFacts(newFacts);
+        setFact(facts[0]);
+      });
   };
 
   const handleNewImage = async () => {
