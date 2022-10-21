@@ -1,6 +1,6 @@
 # Cat Fact Generator
 
-This project was created using TypeScript, React, Express, Axios & Cheerio.
+This project was created using TypeScript, React and Express.
 
 It's a simple generator that shows a new cat picture and cat fact each time the 'generate' button is pressed. The cat pictures have been fetched from https://thecatapi.com/ and the facts have been scraped from https://www.mygavet.com/services/blog/50-cat-facts-you-probably-didnt-know. 
 
