@@ -1,4 +1,3 @@
-import axios from 'axios';
 import * as Cheerio from 'cheerio';
 
 export const URL =
@@ -6,9 +5,7 @@ export const URL =
 
 export const facts: string[] = [];
 
-export const getFacts = async (): Promise<string[]> => {
-  const response = await axios(URL);
-  const markup = response.data;
+export const scrapeFacts = (markup: string): string[] => {
   const $ = Cheerio.load(markup);
 
   $('li:nth-child(49)').remove();
