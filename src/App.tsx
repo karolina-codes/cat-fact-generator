@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    handleNewImage();
+    handleNewSet();
   }, []);
 
   const fetchFacts = () => {
@@ -30,11 +30,14 @@ function App() {
     setImage(newImage);
   };
 
-  const handleNewSet = () => {
-    handleNewImage();
-
+  const handleNewFact = () => {
     const newFact = facts[Math.floor(Math.random() * facts.length)];
     setFact(newFact);
+  };
+
+  const handleNewSet = () => {
+    handleNewImage();
+    handleNewFact();
   };
 
   return (
