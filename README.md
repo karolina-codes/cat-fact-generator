@@ -10,10 +10,10 @@ Clone the repo and run this in the directory:
 
     nvm use node
     npm install
-    npm start:server
+    npm run start:server
 
 In a second terminal window run:
 
-    npm start
+    npm run start
 
 That's all :) 
