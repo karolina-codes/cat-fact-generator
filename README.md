@@ -14,6 +14,8 @@ Clone the repo and run this in the directory:
 
 In a second terminal window run:
 
-    npm run start
+    npm run build
+
+The app will now be running on http://localhost:3000/ 
 
 That's all :) 
