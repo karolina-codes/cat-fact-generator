@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   const fetchFacts = () => {
-    fetch('/facts')
+    fetch('http://localhost:3001/facts')
       .then((response) => response.json())
       .then((newFacts) => {
         setFacts(newFacts);
